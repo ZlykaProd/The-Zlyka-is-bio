@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The3oy — Bio</title>
+<meta name="description" content="The3oy — personal bio">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#030303;--fg:#f4f4f4;--muted:#9b9b9b;--line:#242424;--glow:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Space Grotesk",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:45px 45px}
+.orb{position:fixed;width:420px;height:420px;border-radius:50%;background:#fff;filter:blur(150px);opacity:.045;pointer-events:none;left:-170px;top:-140px}
+.orb2{position:fixed;width:360px;height:360px;border-radius:50%;background:#fff;filter:blur(150px);opacity:.035;right:-150px;bottom:-100px;pointer-events:none}
+.wrap{width:min(1100px,92%);margin:auto;position:relative}
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 0}
+.badge{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:9px 15px;color:#bbb;font-size:12px;letter-spacing:2px;text-transform:uppercase;background:#080808;box-shadow:0 0 30px rgba(255,255,255,.035)}
+.dot{width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 14px #fff;animation:pulse 1.7s infinite}
+h1{font-family:Orbitron,sans-serif;font-size:clamp(58px,13vw,150px);line-height:.9;letter-spacing:-7px;margin:28px 0 18px;text-shadow:0 0 30px rgba(255,255,255,.13),0 0 80px rgba(255,255,255,.05)}
+h1 span{display:block;color:#777;font-size:.2em;letter-spacing:7px;margin-top:24px}
+.subtitle{max-width:620px;margin:auto;color:#aaa;font-size:17px;line-height:1.7}
+.cta{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;text-decoration:none;color:#000;background:#fff;border:1px solid #fff;padding:13px 19px;border-radius:12px;font-weight:700;transition:.25s;box-shadow:0 0 28px rgba(255,255,255,.08)}
+.btn.alt{background:transparent;color:#fff;border-color:#333}.btn:hover{transform:translateY(-3px);box-shadow:0 0 35px rgba(255,255,255,.18)}
+section{padding:35px 0 90px}.section-title{font-family:Orbitron,sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#777;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+.card{grid-column:span 6;border:1px solid var(--line);border-radius:16px;padding:18px;background:linear-gradient(145deg,#0b0b0b,#050505);box-shadow:inset 0 1px 0 rgba(255,255,255,.03),0 20px 70px rgba(0,0,0,.35);transition:.3s}
+.card:hover{border-color:#444;transform:translateY(-4px);box-shadow:0 0 35px rgba(255,255,255,.055)}
+.card.full{grid-column:span 12}.label{color:#666;font-size:12px;text-transform:uppercase;letter-spacing:2px}.value{font-size:22px;margin-top:9px;font-weight:700}.link{color:#fff;text-decoration:none;border-bottom:1px solid #555}.link:hover{border-color:#fff}
+.friends,.creators{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}.chip{padding:10px 13px;border:1px solid #2b2b2b;border-radius:999px;color:#ddd;background:#090909}
+.track{position:relative;overflow:hidden;min-height:220px;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 45%,#292929 0,#101010 22%,#060606 58%);border:1px solid #333}
+.track:before{content:"";position:absolute;width:250px;height:250px;border-radius:50%;border:1px solid #555;box-shadow:0 0 0 15px #0a0a0a,0 0 0 16px #3b3b3b,0 0 70px rgba(255,255,255,.15);animation:spin 12s linear infinite}
+.track:after{content:"";position:absolute;width:54px;height:54px;border-radius:50%;background:#050505;border:1px solid #666;box-shadow:0 0 22px rgba(255,255,255,.15)}
+.track-content{position:relative;z-index:2}.track-name{font-family:Orbitron,sans-serif;font-size:26px;text-shadow:0 0 20px #fff}.track-sub{color:#aaa;margin-top:7px}
+footer{text-align:center;color:#555;border-top:1px solid #161616;padding:30px 0 45px;font-size:13px}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{opacity:.3;box-shadow:0 0 4px #fff}}
+@media(max-width:700px){.card,.card.full{grid-column:span 12}h1{letter-spacing:-4px}.hero{min-height:80vh}.subtitle{font-size:15px}}
+</style>
+</head>
+<body>
+<div class="orb"></div><div class="orb2"></div>
+<header class="hero"><div class="wrap">
+  <div class="badge"><i class="dot"></i> personal bio</div>
+  <h1>The3oy<span>digital identity</span></h1>
+  
+  <div class="cta">
+    <a class="btn" href="https://www.youtube.com/@The3loy" target="_blank" rel="noopener">YouTube ↗</a>
+    <a class="btn alt" href="#contacts">Контакты</a>
+  </div>
+</div></header>
+
+<main class="wrap">
+<section id="contacts">
+<div class="section-title">01 / about me</div>
+<div class="grid">
+  <div class="card"><div class="label">Ник</div><div class="value">The3oy</div></div>
+  <div class="card"><div class="label">YouTube</div><div class="value"><a class="link" href="https://www.youtube.com/@The3loy" target="_blank" rel="noopener">@The3loy ↗</a></div></div>
+  <div class="card"><div class="label">Discord</div><div class="value">the3loy</div></div>
+  <div class="card"><div class="label">Telegram</div><div class="value">@YaZlyka</div></div>
+  <div class="card full"><div class="label">Telegram Channel</div><div class="value"><a class="link" href="https://t.me/zlwhats" target="_blank" rel="noopener">@zlwhats ↗</a></div></div>
+  <div class="card"><div class="label">Любимая игра</div><div class="value"><a class="link" href="https://store.steampowered.com/app/1818450/STALCRAFT_X/" target="_blank" rel="noopener">STALCRAFT: X ↗</a></div></div>
+  <div class="card"><div class="label">Ник в SC</div><div class="value">TheZloy</div></div>
+</div>
+</section>
+
+<section>
+<div class="section-title">02 / favorite track</div>
+<div class="card full track">
+  <div class="track-content">
+    <div class="label">now playing</div>
+    <div class="track-name">dabbackwood — speed 2</div>
+    <div class="track-sub">favorite music • THE3OY EDITION</div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="section-title">03 / people</div>
+<div class="grid">
+  <div class="card full"><div class="label">Друзья</div><div class="friends">
+    <span class="chip">Shaypan4ik</span><span class="chip">Xarays</span><span class="chip">Rip Rar</span><span class="chip">DetectiveOni</span><span class="chip">Maddy (Бабик &lt;3)</span>
+  </div></div>
+  <div class="card full"><div class="label">Любимые ютуберы</div><div class="creators">
+    <span class="chip">Edison</span><span class="chip">Айкеге</span><span class="chip">Илматер</span>
+  </div></div>
+</div>
+</section>
+</main>
+<footer>THE3OY • 2026 • BLACK / WHITE / NEON</footer>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const el=document.querySelector(a.getAttribute('href')); if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}
+}));
+</script>
+</body></html>
