@@ -38,7 +38,7 @@ section{padding:35px 0 90px}.section-title{font-family:Orbitron,sans-serif;font-
 footer{text-align:center;color:#555;border-top:1px solid #161616;padding:30px 0 45px;font-size:13px}
 @keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{opacity:.3;box-shadow:0 0 4px #fff}}
 @media(max-width:700px){.card,.card.full{grid-column:span 12}h1{letter-spacing:-4px}.hero{min-height:80vh}.subtitle{font-size:15px}}
-</style>
+.stats{margin-top:10px}.stats-card{grid-column:span 12;padding:20px}.stats-head{display:flex;justify-content:space-between;align-items:end;gap:15px;flex-wrap:wrap}.stats-total{font-family:Orbitron,sans-serif;font-size:28px}.stats-note{color:#666;font-size:12px;margin-top:5px}.stats-tabs{display:flex;gap:8px;margin:18px 0 14px}.stats-tab{border:1px solid #292929;background:#090909;color:#888;border-radius:9px;padding:8px 12px;cursor:pointer;font:600 12px "Space Grotesk",sans-serif}.stats-tab.active{color:#fff;border-color:#555}.bars{display:grid;grid-template-columns:repeat(24,1fr);gap:5px;align-items:end;height:145px;border-bottom:1px solid #222;padding-top:15px}.bar-wrap{height:100%;display:flex;flex-direction:column;justify-content:end;align-items:center;gap:5px}.bar{width:100%;max-width:20px;min-height:2px;border-radius:4px 4px 0 0;background:#eee;box-shadow:0 0 12px rgba(255,255,255,.16)}.hour{font-size:8px;color:#555}.stat-status{font-size:11px;color:#666;margin-top:12px}.stat-status b{color:#aaa}@media(max-width:700px){.stats-card{padding:16px}.bars{gap:3px;height:120px}.hour{font-size:7px}.stats-total{font-size:23px}}</style>
 </head>
 <body>
 <div class="orb"></div><div class="orb2"></div>
@@ -61,6 +61,9 @@ footer{text-align:center;color:#555;border-top:1px solid #161616;padding:30px 0 
   <div class="card"><div class="label">Discord</div><div class="value">the3loy</div></div>
   <div class="card"><div class="label">Telegram</div><div class="value">@YaZlyka</div></div>
   <div class="card full"><div class="label">Telegram Channel</div><div class="value"><a class="link" href="https://t.me/zlwhats" target="_blank" rel="noopener">@zlwhats ↗</a></div></div>
+  <div class="card"><div class="label">Статус в отношениях</div><div class="value">Нету</div></div>
+  <div class="card"><div class="label">Часовой пояс</div><div class="value">МСК (UTC+3)</div></div>
+  <div class="card full"><div class="label">Был в</div><div class="value">Египте • Турции • Париже</div></div>
   <div class="card"><div class="label">Любимая игра</div><div class="value"><a class="link" href="https://store.steampowered.com/app/1818450/STALCRAFT_X/" target="_blank" rel="noopener">STALCRAFT: X ↗</a></div></div>
   <div class="card"><div class="label">Ник в SC</div><div class="value">TheZloy</div></div>
 </div>
@@ -81,11 +84,23 @@ footer{text-align:center;color:#555;border-top:1px solid #161616;padding:30px 0 
 <div class="section-title">03 / people</div>
 <div class="grid">
   <div class="card full"><div class="label">Друзья</div><div class="friends">
-    <span class="chip">Shaypan4ik</span><span class="chip">Xarays</span><span class="chip">Rip Rar</span><span class="chip">DetectiveOni</span><span class="chip">Maddy (Бабик &lt;3)</span>
+    <span class="chip">Shaypan4ik</span><span class="chip">Xarays</span><span class="chip">Rip Rar</span><span class="chip">DetectiveOni</span><span class="chip">Maddy (Бабик &lt;3)</span><span class="chip">@Pisatel659</span>
   </div></div>
   <div class="card full"><div class="label">Любимые ютуберы</div><div class="creators">
     <span class="chip">Edison</span><span class="chip">Айкеге</span><span class="chip">Илматер</span>
   </div></div>
+</div>
+</section>
+<section class="stats" id="stats">
+<div class="section-title">04 / visits</div>
+<div class="card stats-card">
+  <div class="stats-head">
+    <div><div class="label">Посещения по времени</div><div class="stats-total" id="statsTitle">Сегодня</div><div class="stats-note">Время: МСК (UTC+3)</div></div>
+    <div class="stats-note">Сегодня / Вчера</div>
+  </div>
+  <div class="stats-tabs"><button class="stats-tab active" id="todayTab">Сегодня</button><button class="stats-tab" id="yesterdayTab">Вчера</button></div>
+  <div class="bars" id="bars"></div>
+  <div class="stat-status" id="statStatus">Ожидание данных счётчика…</div>
 </div>
 </section>
 </main>
@@ -94,5 +109,55 @@ footer{text-align:center;color:#555;border-top:1px solid #161616;padding:30px 0 
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
   const el=document.querySelector(a.getAttribute('href')); if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}
 }));
+</script>
+<script>
+(function(){
+  const bars=document.getElementById('bars'), title=document.getElementById('statsTitle');
+  const todayTab=document.getElementById('todayTab'), yesterdayTab=document.getElementById('yesterdayTab');
+  const status=document.getElementById('statStatus');
+
+  function render(data,label){
+    title.textContent=label; bars.innerHTML='';
+    const vals=Array.from({length:24},(_,i)=>Number(data?.[i]||0));
+    const max=Math.max(...vals,1);
+    vals.forEach((v,i)=>{
+      const w=document.createElement('div'); w.className='bar-wrap';
+      const b=document.createElement('div'); b.className='bar';
+      b.style.height=Math.max(2,(v/max)*105)+'px';
+      b.title=String(i).padStart(2,'0')+':00 — '+v+' посещений';
+      const h=document.createElement('div'); h.className='hour';
+      h.textContent=i%2===0?String(i).padStart(2,'0'):'';
+      w.append(b,h); bars.append(w);
+    });
+  }
+
+  function select(tab){
+    const isToday=tab==='today';
+    todayTab.classList.toggle('active',isToday);
+    yesterdayTab.classList.toggle('active',!isToday);
+    load(isToday?'today':'yesterday');
+  }
+
+  async function load(day){
+    try{
+      // Set STATS_API to your backend endpoint to show real hourly visits.
+      // Expected JSON: {"today":[24 numbers],"yesterday":[24 numbers]}
+      const endpoint=window.STATS_API;
+      if(!endpoint) throw new Error('no endpoint');
+      const r=await fetch(endpoint,{cache:'no-store'});
+      if(!r.ok) throw new Error('request failed');
+      const d=await r.json();
+      render(d[day],day==='today'?'Сегодня':'Вчера');
+      status.innerHTML='<b>Данные обновлены.</b> Часовой пояс: МСК (UTC+3).';
+    }catch(e){
+      render(Array(24).fill(0),day==='today'?'Сегодня':'Вчера');
+      status.textContent='Подключи API счётчика, чтобы отображать реальные посещения по часам.';
+    }
+  }
+
+  todayTab.onclick=()=>select('today');
+  yesterdayTab.onclick=()=>select('yesterday');
+  render(Array(24).fill(0),'Сегодня');
+})();
 </script>
 </body></html>
