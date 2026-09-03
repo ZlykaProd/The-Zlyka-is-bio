@@ -38,7 +38,7 @@ section{padding:35px 0 90px}.section-title{font-family:Orbitron,sans-serif;font-
 footer{text-align:center;color:#555;border-top:1px solid #161616;padding:30px 0 45px;font-size:13px}
 @keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{50%{opacity:.3;box-shadow:0 0 4px #fff}}
 @media(max-width:700px){.card,.card.full{grid-column:span 12}h1{letter-spacing:-4px}.hero{min-height:80vh}.subtitle{font-size:15px}}
-.stats{margin-top:10px}.stats-card{grid-column:span 12;padding:20px}.stats-head{display:flex;justify-content:space-between;align-items:end;gap:15px;flex-wrap:wrap}.stats-total{font-family:Orbitron,sans-serif;font-size:28px}.stats-note{color:#666;font-size:12px;margin-top:5px}.stats-tabs{display:flex;gap:8px;margin:18px 0 14px}.stats-tab{border:1px solid #292929;background:#090909;color:#888;border-radius:9px;padding:8px 12px;cursor:pointer;font:600 12px "Space Grotesk",sans-serif}.stats-tab.active{color:#fff;border-color:#555}.bars{display:grid;grid-template-columns:repeat(24,1fr);gap:5px;align-items:end;height:145px;border-bottom:1px solid #222;padding-top:15px}.bar-wrap{height:100%;display:flex;flex-direction:column;justify-content:end;align-items:center;gap:5px}.bar{width:100%;max-width:20px;min-height:2px;border-radius:4px 4px 0 0;background:#eee;box-shadow:0 0 12px rgba(255,255,255,.16)}.hour{font-size:8px;color:#555}.stat-status{font-size:11px;color:#666;margin-top:12px}.stat-status b{color:#aaa}@media(max-width:700px){.stats-card{padding:16px}.bars{gap:3px;height:120px}.hour{font-size:7px}.stats-total{font-size:23px}}</style>
+</style>
 </head>
 <body>
 <div class="orb"></div><div class="orb2"></div>
@@ -91,20 +91,19 @@ footer{text-align:center;color:#555;border-top:1px solid #161616;padding:30px 0 
   </div></div>
 </div>
 </section>
-<section class="stats" id="stats">
-<div class="section-title">04 / visits</div>
-<div class="card stats-card">
-  <div class="stats-head">
-    <div><div class="label">Посещения по времени</div><div class="stats-total" id="statsTitle">Сегодня</div><div class="stats-note">Время: МСК (UTC+3)</div></div>
-    <div class="stats-note">Сегодня / Вчера</div>
-  </div>
-  <div class="stats-tabs"><button class="stats-tab active" id="todayTab">Сегодня</button><button class="stats-tab" id="yesterdayTab">Вчера</button></div>
-  <div class="bars" id="bars"></div>
-  <div class="stat-status" id="statStatus">Ожидание данных счётчика…</div>
+
+<section id="games">
+<div class="section-title">04 / games</div>
+<div class="grid">
+  <div class="card"><div class="label">STALZONE</div><div class="value"><a class="link" href="https://store.steampowered.com/app/1818450/STALCRAFT_X/" target="_blank" rel="noopener">STALZONE ↗</a></div></div>
+  <div class="card"><div class="label">STALCUBE</div><div class="value"><a class="link" href="https://stalcube.su/" target="_blank" rel="noopener">STALCUBE ↗</a></div></div>
+  <div class="card"><div class="label">Minecraft</div><div class="value"><a class="link" href="https://www.minecraft.net/" target="_blank" rel="noopener">Minecraft ↗</a></div></div>
+  <div class="card"><div class="label">MECCHA CHAMELEON</div><div class="value"><a class="link" href="https://store.steampowered.com/search/?term=MECCHA%20CHAMELEON" target="_blank" rel="noopener">MECCHA CHAMELEON ↗</a></div></div>
+  <div class="card full"><div class="label">Among Us</div><div class="value"><a class="link" href="https://store.steampowered.com/app/945360/Among_Us/" target="_blank" rel="noopener">Among Us ↗</a></div></div>
 </div>
 </section>
 </main>
-<footer>THE3OY • 2026 • BLACK / WHITE / NEON</footer>
+<footer>THE3OY • v4 • 2026 • BLACK / WHITE / NEON</footer>
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
   const el=document.querySelector(a.getAttribute('href')); if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}
