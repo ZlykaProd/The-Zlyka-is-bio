@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The3oy — Bio</title>
-<meta name="description" content="The3oy — personal bio">
+<title>The3loy — Bio</title>
+<meta name="description" content="The3loy — personal bio">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#030303;--fg:#f4f4f4;--muted:#9b9b9b;--line:#242424;--glow:#fff}
+:root{--bg:#050308;--fg:#f7f2ff;--muted:#a99db5;--line:#2d2136;--glow:#ff7a00;--orange:#ff7a00;--purple:#8d3cff}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:"Space Grotesk",sans-serif;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:45px 45px}
-.orb{position:fixed;width:420px;height:420px;border-radius:50%;background:#fff;filter:blur(150px);opacity:.045;pointer-events:none;left:-170px;top:-140px}
-.orb2{position:fixed;width:360px;height:360px;border-radius:50%;background:#fff;filter:blur(150px);opacity:.035;right:-150px;bottom:-100px;pointer-events:none}
+body{margin:0;background:radial-gradient(circle at 50% -10%,rgba(255,122,0,.10),transparent 35%),radial-gradient(circle at 100% 55%,rgba(141,60,255,.08),transparent 32%),var(--bg);color:var(--fg);font-family:"Space Grotesk",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(255,122,0,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(141,60,255,.025) 1px,transparent 1px);background-size:45px 45px}
+.orb{position:fixed;width:420px;height:420px;border-radius:50%;background:var(--orange);filter:blur(150px);opacity:.045;pointer-events:none;left:-170px;top:-140px}
+.orb2{position:fixed;width:360px;height:360px;border-radius:50%;background:var(--purple);filter:blur(150px);opacity:.035;right:-150px;bottom:-100px;pointer-events:none}
 .wrap{width:min(1100px,92%);margin:auto;position:relative}
 .hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 0}
 .badge{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:9px 15px;color:#bbb;font-size:12px;letter-spacing:2px;text-transform:uppercase;background:#080808;box-shadow:0 0 30px rgba(255,255,255,.035)}
@@ -44,15 +44,66 @@ footer{text-align:center;color:#555;border-top:1px solid #161616;padding:30px 0 
 .music-player .mp-title{font-size:12px;font-weight:700;letter-spacing:.08em;margin-bottom:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .music-player audio{width:100%;height:30px}
 @media(max-width:600px){.music-player{width:210px;right:10px;bottom:10px}}
+
+/* Halloween theme */
+.halloween-sky{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.moon{position:absolute;right:7vw;top:7vh;width:86px;height:86px;border-radius:50%;background:#ffe7a8;box-shadow:0 0 28px rgba(255,180,70,.45),0 0 90px rgba(255,122,0,.16)}
+.moon:after{content:"";position:absolute;left:18px;top:12px;width:70px;height:70px;border-radius:50%;background:#050308;opacity:.92}
+.bat{position:absolute;color:#ff7a00;font-size:24px;opacity:.68;text-shadow:0 0 14px rgba(255,122,0,.35);animation:batFloat 5s ease-in-out infinite;user-select:none}
+.b1{left:5%;top:12%;animation-delay:-1s}.b2{right:13%;top:24%;font-size:18px;animation-delay:-3s}
+.b3{left:18%;top:68%;font-size:16px;animation-delay:-2s}.b4{left:31%;top:9%;font-size:19px;animation-delay:-4s}
+.b5{right:29%;top:13%;font-size:15px;animation-delay:-1.7s}.b6{left:3%;top:43%;font-size:17px;animation-delay:-3.4s}
+.b7{right:4%;top:49%;font-size:22px;animation-delay:-.8s}.b8{left:42%;top:28%;font-size:14px;animation-delay:-2.5s}
+.b9{right:42%;top:37%;font-size:20px;animation-delay:-4.5s}.b10{left:12%;top:31%;font-size:13px;animation-delay:-.4s}
+.b11{right:22%;top:65%;font-size:16px;animation-delay:-3.8s}.b12{left:27%;top:84%;font-size:21px;animation-delay:-1.2s}
+.b13{right:34%;top:78%;font-size:14px;animation-delay:-2.9s}.b14{left:52%;top:6%;font-size:16px;animation-delay:-4.1s}
+.b15{right:7%;top:75%;font-size:18px;animation-delay:-1.9s}.b16{left:7%;top:87%;font-size:15px;animation-delay:-3.1s}
+.b17{right:48%;top:17%;font-size:12px;animation-delay:-.7s}.b18{left:66%;top:56%;font-size:22px;animation-delay:-4.7s}
+.b19{left:36%;top:52%;font-size:13px;animation-delay:-2.1s}.b20{right:18%;top:91%;font-size:15px;animation-delay:-3.6s}
+.pumpkin{position:absolute;right:4%;bottom:5%;font-size:48px;filter:drop-shadow(0 0 16px rgba(255,122,0,.28));animation:pumpkinPulse 3s ease-in-out infinite}
+.wrap,header,main,footer{position:relative;z-index:1}
+.badge{border-color:#4a2b13;background:rgba(12,7,5,.86);box-shadow:0 0 30px rgba(255,122,0,.08)}
+.dot{background:var(--orange);box-shadow:0 0 14px var(--orange)}
+h1{text-shadow:0 0 30px rgba(255,122,0,.24),0 0 80px rgba(141,60,255,.13)}
+h1 span{color:#a47bc4}
+.btn{background:linear-gradient(135deg,#ff8a1c,#ff6500);border-color:#ff8a1c;color:#140800;box-shadow:0 0 28px rgba(255,122,0,.18)}
+.btn.alt{background:transparent;color:#fff;border-color:#4a2b57}
+.btn:hover{box-shadow:0 0 35px rgba(255,122,0,.28)}
+.card{border-color:#2d2136;background:linear-gradient(145deg,#100b12,#07050a);box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 20px 70px rgba(0,0,0,.4)}
+.card:hover{border-color:#65407c;box-shadow:0 0 35px rgba(141,60,255,.10)}
+.link{color:#ffd7b0;border-color:#70401d}.link:hover{border-color:#ff7a00;color:#fff}
+.chip{border-color:#422a50;background:#0d0811}
+.track{background:radial-gradient(circle at 50% 45%,#3a1908 0,#160c0c 25%,#08050a 60%);border-color:#4a2b13}
+.track:before{border-color:#75401c;box-shadow:0 0 0 15px #0a0708,0 0 0 16px #43230f,0 0 70px rgba(255,122,0,.18)}
+.track:after{background:#050308;border-color:#7b552f;box-shadow:0 0 22px rgba(255,122,0,.18)}
+.track-name{text-shadow:0 0 20px #ff7a00}
+.music-player{border-color:rgba(255,122,0,.32)!important;background:rgba(10,6,12,.94)!important;box-shadow:0 0 24px rgba(255,122,0,.12)!important}
+@keyframes batFloat{0%,100%{transform:translate(0,0) rotate(-3deg)}50%{transform:translate(8px,-14px) rotate(3deg)}}
+@keyframes pumpkinPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@media(max-width:700px){.moon{right:4vw;top:4vh;width:58px;height:58px}.moon:after{left:12px;top:8px;width:48px;height:48px}.bat{font-size:14px!important}.b4,.b9,.b12,.b18{display:none}.pumpkin{font-size:36px}}
+
 </style></head>
 <body>
+<div class="halloween-sky" aria-hidden="true">
+<div class="moon"></div>
+
+<div class="bat b1">🦇</div><div class="bat b2">🦇</div><div class="bat b3">🦇</div>
+<div class="bat b4">🦇</div><div class="bat b5">🦇</div><div class="bat b6">🦇</div>
+<div class="bat b7">🦇</div><div class="bat b8">🦇</div><div class="bat b9">🦇</div>
+<div class="bat b10">🦇</div><div class="bat b11">🦇</div><div class="bat b12">🦇</div>
+<div class="bat b13">🦇</div><div class="bat b14">🦇</div><div class="bat b15">🦇</div>
+<div class="bat b16">🦇</div><div class="bat b17">🦇</div><div class="bat b18">🦇</div>
+<div class="bat b19">🦇</div><div class="bat b20">🦇</div>
+
+<div class="pumpkin">🎃</div>
+</div>
 <div class="orb"></div><div class="orb2"></div>
 <header class="hero"><div class="wrap">
   <div class="badge"><i class="dot"></i> personal bio</div>
-  <h1>The3oy<span>digital identity</span></h1>
+  <h1>The3loy<span>digital identity</span></h1>
   
   <div class="cta">
-    <a class="btn" href="https://www.youtube.com/@The3loy" target="_blank" rel="noopener">YouTube ↗</a>
+    <a class="btn" href="https://www.youtube.com/@The3loy" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
     <a class="btn alt" href="#contacts">Контакты</a>
   </div>
 </div></header>
@@ -61,15 +112,15 @@ footer{text-align:center;color:#555;border-top:1px solid #161616;padding:30px 0 
 <section id="contacts">
 <div class="section-title">01 / about me</div>
 <div class="grid">
-  <div class="card"><div class="label">Ник</div><div class="value">The3oy</div></div>
-  <div class="card"><div class="label">YouTube</div><div class="value"><a class="link" href="https://www.youtube.com/@The3loy" target="_blank" rel="noopener">@The3loy ↗</a></div></div>
+  <div class="card"><div class="label">Ник</div><div class="value">The3loy</div></div>
+  <div class="card"><div class="label">YouTube</div><div class="value"><a class="link" href="https://www.youtube.com/@The3loy" target="_blank" rel="noopener noreferrer">@The3loy ↗</a></div></div>
   <div class="card"><div class="label">Discord</div><div class="value">the3loy</div></div>
   <div class="card"><div class="label">Telegram</div><div class="value">@YaZlyka</div></div>
-  <div class="card full"><div class="label">Telegram Channel</div><div class="value"><a class="link" href="https://t.me/zlwhats" target="_blank" rel="noopener">@zlwhats ↗</a></div></div>
+  <div class="card full"><div class="label">Telegram Channel</div><div class="value"><a class="link" href="https://t.me/zlwhats" target="_blank" rel="noopener noreferrer">@zlwhats ↗</a></div></div>
   <div class="card"><div class="label">Статус в отношениях</div><div class="value">Есть девушка</div></div>
   <div class="card"><div class="label">Часовой пояс</div><div class="value">МСК (UTC+3)</div></div>
   <div class="card full"><div class="label">Был в</div><div class="value">Египте • Турции • Париже</div></div>
-  <div class="card"><div class="label">Любимая игра</div><div class="value"><a class="link" href="https://store.steampowered.com/app/1818450/STALCRAFT_X/" target="_blank" rel="noopener">STALCRAFT: X ↗</a></div></div>
+  <div class="card"><div class="label">Любимая игра</div><div class="value"><a class="link" href="https://store.steampowered.com/app/1818450/STALCRAFT_X/" target="_blank" rel="noopener noreferrer">STALCRAFT: X ↗</a></div></div>
   <div class="card"><div class="label">Ник в SC</div><div class="value">TheZloy</div></div>
 </div>
 </section>
@@ -80,7 +131,7 @@ footer{text-align:center;color:#555;border-top:1px solid #161616;padding:30px 0 
   <div class="track-content">
     <div class="label">now playing</div>
     <div class="track-name">dabbackwood — speed 2</div>
-    <div class="track-sub">favorite music • THE3OY EDITION</div>
+    <div class="track-sub">favorite music • The3loy EDITION</div>
   </div>
 </div>
 </section>
@@ -98,78 +149,39 @@ footer{text-align:center;color:#555;border-top:1px solid #161616;padding:30px 0 
 </section>
 
 <section id="projects"><div class="section-title">04 / projects</div><div class="grid">
-<div class="card"><div class="label">Zl//Test</div><div class="value"><a class="link" href="https://zlykaprod.github.io/Zl-Testing/" target="_blank" rel="noopener">Тест скорости интернета ↗</a></div></div>
-<div class="card"><div class="label">The-Zlyka-is-bio</div><div class="value"><a class="link" href="https://zlykaprod.github.io/The-Zlyka-is-bio/" target="_blank" rel="noopener">Сайт с био ↗</a></div><div class="stats-note"><a class="link" href="https://github.com/ZlykaProd/The-Zlyka-is-bio" target="_blank" rel="noopener">GitHub ↗</a></div></div>
+<div class="card"><div class="label">Zl//Test</div><div class="value"><a class="link" href="https://zlykaprod.github.io/Zl-Testing/" target="_blank" rel="noopener noreferrer">Тест скорости интернета ↗</a></div></div>
+<div class="card"><div class="label">The-Zlyka-is-bio</div><div class="value"><a class="link" href="https://zlykaprod.github.io/The-Zlyka-is-bio/" target="_blank" rel="noopener noreferrer">Сайт с био ↗</a></div><div class="stats-note"><a class="link" href="https://github.com/ZlykaProd/The-Zlyka-is-bio" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
 </div></section><section id="games">
 <div class="section-title">05 / games</div>
 <div class="grid">
-  <div class="card"><div class="label">STALZONE</div><div class="value"><a class="link" href="https://store.steampowered.com/app/1818450/STALCRAFT_X/" target="_blank" rel="noopener">STALZONE ↗</a></div></div>
-  <div class="card"><div class="label">STALCUBE</div><div class="value"><a class="link" href="https://stalcube.su/" target="_blank" rel="noopener">STALCUBE ↗</a></div></div>
-  <div class="card"><div class="label">Minecraft</div><div class="value"><a class="link" href="https://www.minecraft.net/" target="_blank" rel="noopener">Minecraft ↗</a></div></div>
-  <div class="card"><div class="label">MECCHA CHAMELEON</div><div class="value"><a class="link" href="https://store.steampowered.com/search/?term=MECCHA%20CHAMELEON" target="_blank" rel="noopener">MECCHA CHAMELEON ↗</a></div></div>
-  <div class="card full"><div class="label">Among Us</div><div class="value"><a class="link" href="https://store.steampowered.com/app/945360/Among_Us/" target="_blank" rel="noopener">Among Us ↗</a></div></div>
+  <div class="card"><div class="label">STALZONE</div><div class="value"><a class="link" href="https://store.steampowered.com/app/1818450/STALCRAFT_X/" target="_blank" rel="noopener noreferrer">STALZONE ↗</a></div></div>
+  <div class="card"><div class="label">STALCUBE</div><div class="value"><a class="link" href="https://stalcube.su/" target="_blank" rel="noopener noreferrer">STALCUBE ↗</a></div></div>
+  <div class="card"><div class="label">Minecraft</div><div class="value"><a class="link" href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer">Minecraft ↗</a></div></div>
+  <div class="card"><div class="label">MECCHA CHAMELEON</div><div class="value"><a class="link" href="https://store.steampowered.com/search/?term=MECCHA%20CHAMELEON" target="_blank" rel="noopener noreferrer">MECCHA CHAMELEON ↗</a></div></div>
+  <div class="card full"><div class="label">Among Us</div><div class="value"><a class="link" href="https://store.steampowered.com/app/945360/Among_Us/" target="_blank" rel="noopener noreferrer">Among Us ↗</a></div></div>
 </div>
 </section>
 </main>
-<footer>THE3OY • v4 • 2026 • BLACK / WHITE / NEON</footer>
+<footer>The3loy • v4 • 2026 • BLACK / ORANGE / PURPLE • HALLOWEEN</footer>
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
   const el=document.querySelector(a.getAttribute('href')); if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}
 }));
 </script>
-<script>
-(function(){
-  const bars=document.getElementById('bars'), title=document.getElementById('statsTitle');
-  const todayTab=document.getElementById('todayTab'), yesterdayTab=document.getElementById('yesterdayTab');
-  const status=document.getElementById('statStatus');
 
-  function render(data,label){
-    title.textContent=label; bars.innerHTML='';
-    const vals=Array.from({length:24},(_,i)=>Number(data?.[i]||0));
-    const max=Math.max(...vals,1);
-    vals.forEach((v,i)=>{
-      const w=document.createElement('div'); w.className='bar-wrap';
-      const b=document.createElement('div'); b.className='bar';
-      b.style.height=Math.max(2,(v/max)*105)+'px';
-      b.title=String(i).padStart(2,'0')+':00 — '+v+' посещений';
-      const h=document.createElement('div'); h.className='hour';
-      h.textContent=i%2===0?String(i).padStart(2,'0'):'';
-      w.append(b,h); bars.append(w);
-    });
-  }
-
-  function select(tab){
-    const isToday=tab==='today';
-    todayTab.classList.toggle('active',isToday);
-    yesterdayTab.classList.toggle('active',!isToday);
-    load(isToday?'today':'yesterday');
-  }
-
-  async function load(day){
-    try{
-      // Set STATS_API to your backend endpoint to show real hourly visits.
-      // Expected JSON: {"today":[24 numbers],"yesterday":[24 numbers]}
-      const endpoint=window.STATS_API;
-      if(!endpoint) throw new Error('no endpoint');
-      const r=await fetch(endpoint,{cache:'no-store'});
-      if(!r.ok) throw new Error('request failed');
-      const d=await r.json();
-      render(d[day],day==='today'?'Сегодня':'Вчера');
-      status.innerHTML='<b>Данные обновлены.</b> Часовой пояс: МСК (UTC+3).';
-    }catch(e){
-      render(Array(24).fill(0),day==='today'?'Сегодня':'Вчера');
-      status.textContent='Подключи API счётчика, чтобы отображать реальные посещения по часам.';
-    }
-  }
-
-  todayTab.onclick=()=>select('today');
-  yesterdayTab.onclick=()=>select('yesterday');
-  render(Array(24).fill(0),'Сегодня');
-})();
-</script>
 <div class="music-player">
 <div class="mp-title">dabbackwood — speed 2</div>
-<audio id="bioMusic" controls autoplay loop>
+<audio id="bioMusic" controls autoplay loop preload="metadata">
 <source src="dabbackwood-speed-2.mp3" type="audio/mpeg">
 </audio></div>
-<script>document.addEventListener("DOMContentLoaded",()=>{const a=document.getElementById("bioMusic");a.volume=.45;});</script></body></html>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  const a=document.getElementById("bioMusic");
+  if(!a) return;
+  a.volume=.45;
+  const tryPlay=()=>a.play().catch(()=>{});
+  tryPlay();
+  document.addEventListener("pointerdown",tryPlay,{once:true,passive:true});
+  a.addEventListener("error",()=>{const p=a.closest(".music-player");if(p)p.classList.add("audio-missing");},{once:true});
+});
+</script></body></html>
