@@ -45,57 +45,45 @@ footer{text-align:center;color:#555;border-top:1px solid #161616;padding:30px 0 
 .music-player audio{width:100%;height:30px}
 @media(max-width:600px){.music-player{width:210px;right:10px;bottom:10px}}
 
-/* Halloween theme */
-.halloween-sky{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
-.moon{position:absolute;right:7vw;top:7vh;width:86px;height:86px;border-radius:50%;background:#ffe7a8;box-shadow:0 0 28px rgba(255,180,70,.45),0 0 90px rgba(255,122,0,.16)}
-.moon:after{content:"";position:absolute;left:18px;top:12px;width:70px;height:70px;border-radius:50%;background:#050308;opacity:.92}
-.bat{position:absolute;color:#ff7a00;font-size:24px;opacity:.68;text-shadow:0 0 14px rgba(255,122,0,.35);animation:batFloat 5s ease-in-out infinite;user-select:none}
-.b1{left:5%;top:12%;animation-delay:-1s}.b2{right:13%;top:24%;font-size:18px;animation-delay:-3s}
-.b3{left:18%;top:68%;font-size:16px;animation-delay:-2s}.b4{left:31%;top:9%;font-size:19px;animation-delay:-4s}
-.b5{right:29%;top:13%;font-size:15px;animation-delay:-1.7s}.b6{left:3%;top:43%;font-size:17px;animation-delay:-3.4s}
-.b7{right:4%;top:49%;font-size:22px;animation-delay:-.8s}.b8{left:42%;top:28%;font-size:14px;animation-delay:-2.5s}
-.b9{right:42%;top:37%;font-size:20px;animation-delay:-4.5s}.b10{left:12%;top:31%;font-size:13px;animation-delay:-.4s}
-.b11{right:22%;top:65%;font-size:16px;animation-delay:-3.8s}.b12{left:27%;top:84%;font-size:21px;animation-delay:-1.2s}
-.b13{right:34%;top:78%;font-size:14px;animation-delay:-2.9s}.b14{left:52%;top:6%;font-size:16px;animation-delay:-4.1s}
-.b15{right:7%;top:75%;font-size:18px;animation-delay:-1.9s}.b16{left:7%;top:87%;font-size:15px;animation-delay:-3.1s}
-.b17{right:48%;top:17%;font-size:12px;animation-delay:-.7s}.b18{left:66%;top:56%;font-size:22px;animation-delay:-4.7s}
-.b19{left:36%;top:52%;font-size:13px;animation-delay:-2.1s}.b20{right:18%;top:91%;font-size:15px;animation-delay:-3.6s}
-.pumpkin{position:absolute;right:4%;bottom:5%;font-size:48px;filter:drop-shadow(0 0 16px rgba(255,122,0,.28));animation:pumpkinPulse 3s ease-in-out infinite}
+/* New Year theme */
+:root{--bg:#050b18;--fg:#f4f8ff;--muted:#a9bad3;--line:#203653;--glow:#79d9ff;--orange:#79d9ff;--purple:#d8b86a}
+body{background:radial-gradient(circle at 50% -10%,rgba(80,170,255,.18),transparent 38%),radial-gradient(circle at 100% 55%,rgba(225,190,105,.10),transparent 34%),var(--bg)}
+body:before{opacity:.22;background-image:linear-gradient(rgba(125,190,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(125,190,255,.035) 1px,transparent 1px)}
+.orb{background:#55bfff;opacity:.08}.orb2{background:#e7c878;opacity:.06}
+.newyear-sky{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.snow{position:absolute;top:-12vh;color:#e8f6ff;opacity:.75;text-shadow:0 0 12px rgba(160,220,255,.8);animation:snowFall linear infinite}
+.s1{left:8%;font-size:17px;animation-duration:13s}.s2{left:23%;font-size:11px;animation-duration:17s;animation-delay:-7s}.s3{left:41%;font-size:20px;animation-duration:15s;animation-delay:-4s}.s4{left:63%;font-size:13px;animation-duration:19s;animation-delay:-11s}.s5{left:79%;font-size:18px;animation-duration:14s;animation-delay:-3s}.s6{left:93%;font-size:12px;animation-duration:18s;animation-delay:-9s}
+.ornament{position:absolute;top:0;width:2px;height:95px;background:linear-gradient(#8ba9c9,rgba(139,169,201,0));transform-origin:top;opacity:.8}
+.ornament:after{content:"";position:absolute;left:-13px;top:88px;width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff4c9,#d6ad58 38%,#8b6428 100%);box-shadow:0 0 24px rgba(224,190,105,.3)}
+.o1{left:13%;height:83px}.o2{right:13%;height:120px}.o2:after{background:radial-gradient(circle at 32% 28%,#e4f7ff,#62b9e9 40%,#245a8a)}
+.tree{position:absolute;right:4%;bottom:4%;font-size:54px;filter:drop-shadow(0 0 18px rgba(103,190,255,.25));animation:treeGlow 3s ease-in-out infinite}
 .wrap,header,main,footer{position:relative;z-index:1}
-.badge{border-color:#4a2b13;background:rgba(12,7,5,.86);box-shadow:0 0 30px rgba(255,122,0,.08)}
-.dot{background:var(--orange);box-shadow:0 0 14px var(--orange)}
-h1{text-shadow:0 0 30px rgba(255,122,0,.24),0 0 80px rgba(141,60,255,.13)}
-h1 span{color:#a47bc4}
-.btn{background:linear-gradient(135deg,#ff8a1c,#ff6500);border-color:#ff8a1c;color:#140800;box-shadow:0 0 28px rgba(255,122,0,.18)}
-.btn.alt{background:transparent;color:#fff;border-color:#4a2b57}
-.btn:hover{box-shadow:0 0 35px rgba(255,122,0,.28)}
-.card{border-color:#2d2136;background:linear-gradient(145deg,#100b12,#07050a);box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 20px 70px rgba(0,0,0,.4)}
-.card:hover{border-color:#65407c;box-shadow:0 0 35px rgba(141,60,255,.10)}
-.link{color:#ffd7b0;border-color:#70401d}.link:hover{border-color:#ff7a00;color:#fff}
-.chip{border-color:#422a50;background:#0d0811}
-.track{background:radial-gradient(circle at 50% 45%,#3a1908 0,#160c0c 25%,#08050a 60%);border-color:#4a2b13}
-.track:before{border-color:#75401c;box-shadow:0 0 0 15px #0a0708,0 0 0 16px #43230f,0 0 70px rgba(255,122,0,.18)}
-.track:after{background:#050308;border-color:#7b552f;box-shadow:0 0 22px rgba(255,122,0,.18)}
-.track-name{text-shadow:0 0 20px #ff7a00}
-.music-player{border-color:rgba(255,122,0,.32)!important;background:rgba(10,6,12,.94)!important;box-shadow:0 0 24px rgba(255,122,0,.12)!important}
-@keyframes batFloat{0%,100%{transform:translate(0,0) rotate(-3deg)}50%{transform:translate(8px,-14px) rotate(3deg)}}
-@keyframes pumpkinPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
-@media(max-width:700px){.moon{right:4vw;top:4vh;width:58px;height:58px}.moon:after{left:12px;top:8px;width:48px;height:48px}.bat{font-size:14px!important}.b4,.b9,.b12,.b18{display:none}.pumpkin{font-size:36px}}
-
+.badge{border-color:#31516e;background:rgba(5,14,29,.86);box-shadow:0 0 30px rgba(90,180,255,.10)}
+.dot{background:#d9bd73;box-shadow:0 0 14px #d9bd73}
+h1{text-shadow:0 0 30px rgba(100,190,255,.30),0 0 80px rgba(220,190,115,.13)}
+h1 span{color:#9ec9e8}
+.btn{background:linear-gradient(135deg,#e8d08b,#b9954c);border-color:#e8d08b;color:#101827;box-shadow:0 0 28px rgba(220,190,115,.18)}
+.btn.alt{background:rgba(8,22,40,.35);color:#eaf6ff;border-color:#416789}
+.btn:hover{box-shadow:0 0 35px rgba(120,200,255,.24)}
+.card{border-color:#203b59;background:linear-gradient(145deg,rgba(12,29,51,.96),rgba(5,13,27,.98));box-shadow:inset 0 1px 0 rgba(255,255,255,.045),0 20px 70px rgba(0,0,0,.4)}
+.card:hover{border-color:#5488b0;box-shadow:0 0 35px rgba(100,190,255,.12)}
+.link{color:#d8efff;border-color:#527b9e}.link:hover{border-color:#e5c879;color:#fff}
+.chip{border-color:#294968;background:#0a1a2e}
+.track{background:radial-gradient(circle at 50% 45%,#173d5d 0,#0c2037 28%,#050d1b 65%);border-color:#315777}
+.track:before{border-color:#6b9fc1;box-shadow:0 0 0 15px #08182a,0 0 0 16px #345b79,0 0 70px rgba(100,190,255,.2)}
+.track:after{background:#06101e;border-color:#d4b66c;box-shadow:0 0 22px rgba(220,190,115,.22)}
+.track-name{text-shadow:0 0 20px #8bdcff}
+.music-player{border-color:rgba(115,190,245,.35)!important;background:rgba(5,15,30,.94)!important;box-shadow:0 0 24px rgba(100,190,255,.13)!important}
+@keyframes snowFall{0%{transform:translate3d(0,-12vh,0) rotate(0);opacity:0}10%{opacity:.8}100%{transform:translate3d(35px,115vh,0) rotate(260deg);opacity:.1}}
+@keyframes treeGlow{0%,100%{filter:drop-shadow(0 0 12px rgba(103,190,255,.18))}50%{filter:drop-shadow(0 0 24px rgba(224,190,105,.38))}}
+@media(max-width:700px){.ornament{transform:scale(.72);transform-origin:top}.tree{font-size:40px;right:3%;bottom:3%}}
 </style></head>
 <body>
-<div class="halloween-sky" aria-hidden="true">
-<div class="moon"></div>
-
-<div class="bat b1">🦇</div><div class="bat b2">🦇</div><div class="bat b3">🦇</div>
-<div class="bat b4">🦇</div><div class="bat b5">🦇</div><div class="bat b6">🦇</div>
-<div class="bat b7">🦇</div><div class="bat b8">🦇</div><div class="bat b9">🦇</div>
-<div class="bat b10">🦇</div><div class="bat b11">🦇</div><div class="bat b12">🦇</div>
-<div class="bat b13">🦇</div><div class="bat b14">🦇</div><div class="bat b15">🦇</div>
-<div class="bat b16">🦇</div><div class="bat b17">🦇</div><div class="bat b18">🦇</div>
-<div class="bat b19">🦇</div><div class="bat b20">🦇</div>
-
-<div class="pumpkin">🎃</div>
+<div class="newyear-sky" aria-hidden="true">
+<div class="ornament o1"></div><div class="ornament o2"></div>
+<div class="snow s1">❄</div><div class="snow s2">✦</div><div class="snow s3">❅</div>
+<div class="snow s4">❄</div><div class="snow s5">✧</div><div class="snow s6">❅</div>
+<div class="tree">🎄</div>
 </div>
 <div class="orb"></div><div class="orb2"></div>
 <header class="hero"><div class="wrap">
@@ -162,7 +150,7 @@ h1 span{color:#a47bc4}
 </div>
 </section>
 </main>
-<footer>The3loy • v4 • 2026 • BLACK / ORANGE / PURPLE • HALLOWEEN</footer>
+<footer>The3loy • v4 • 2026 • MIDNIGHT / ICE BLUE / GOLD • NEW YEAR</footer>
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
   const el=document.querySelector(a.getAttribute('href')); if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}
